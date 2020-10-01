@@ -10,6 +10,18 @@
   </head>
 
   <body>
-    <%= yield %>
+    <main>
+      <% if flash[:notice]%>
+        <div class="alert alert-info bg-light text-center">
+          <strong><%= notice%></strong>
+        </div>
+    <%end%>
+      <% if flash[:alert]%>
+        <div class="alert alert-warning text-center">
+          <strong><%= alert.html_safe%></strong>
+        </div>
+      <%end%>
+      <%= yield %>
+    </main>
   </body>
 </html>
