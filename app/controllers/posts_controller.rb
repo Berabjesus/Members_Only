@@ -1,7 +1,11 @@
 class PostsController < ApplicationController
 
   def index
-    @id = current_user.id
+    if user_signed_in?
+      @id = current_user.id
+    else
+      @id = 'Not singned in'
+    end
   end
 
   def new

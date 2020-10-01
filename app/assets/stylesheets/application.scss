@@ -1,1 +1,22 @@
 @import 'bootstrap/scss/bootstrap';
+
+// Defaults
+.theme-bg {
+  background-color: #475464;
+}
+
+.theme-bg-light {
+  background-color: #f8f8f8;
+}
+// Header
+.logo {
+  width: 60px;
+  height: 60px;
+}
+
+// Main
+.main {
+  margin-top: 80px;
+}
+
+// sidebar
