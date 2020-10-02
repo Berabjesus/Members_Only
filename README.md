@@ -1,5 +1,6 @@
 # Members Only Rumor Mill
-> This is a Microverse Ruby or rails project that is done to show the use of sessions to authorize view access to member users only.
+### This is a Microverse Ruby or rails project that is done to show the use of sessions to authorize view access to member users only.
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
