@@ -4,8 +4,7 @@ class PostsController < ApplicationController
     @posts = Post.all.order('created_at DESC')
   end
 
-  def new
-  end
+  def new; end
 
   def create
     @post = current_user.posts.build(post_params)
