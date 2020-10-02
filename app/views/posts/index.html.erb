@@ -7,12 +7,12 @@
     <% @posts.each do |post|%>
       <section class="card theme-bg py-2 my-3 border border-light px-3 shadow-lg">
         <div class="card-title d-flex flex-column border-bottom  font-weight-lighter">
-          <h2><%= user_signed_in?? post.user.name : "Anonymous"%></h2>
+          <h2><%= user_status_member_name post%></h2>
           <div class="d-flex">
             <em class="h4">Title: <%= post.title %></em>
           </div>
           <div>
-            <span class="ml-auto"><%= distance_of_time_in_words(Time.now, post.created_at ) %> ago</span>
+            <span class="ml-auto"><%= show_time post %> ago</span>
           </div>
         </div>
         <div class="card-body d-flex">
