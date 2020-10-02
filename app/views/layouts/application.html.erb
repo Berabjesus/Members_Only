@@ -29,14 +29,14 @@
         </div>
       </nav>
     </header>
-    <main class= 'main container'>
+    <main class= 'main container shadow'>
       <% if flash[:notice]%>
-        <div class="alert alert-info bg-light text-center">
+        <div class="alert alert-info bg-light border border-light text-white text-center">
           <strong><%= notice%></strong>
         </div>
       <%end%>
       <% if flash[:alert]%>
-        <div class="alert alert-warning text-center text-white bg-danger border">
+        <div class="alert alert-warning text-center text-white bg-danger border m-0 w-100">
           <strong class="h5"><%= alert.html_safe%></strong>
         </div>
       <%end%>
