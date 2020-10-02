@@ -1,13 +1,13 @@
 <div class="row d-flex flex-column text-white px-4 theme-bg border-rad-1">
   <div class="border-bottom border-light pb-4">
-    <%= render partial: 'form' if @signed_in %>
+    <%= render partial: 'form' if user_signed_in? %>
   </div>
-  <h1>Rumors <%= @posts.count%></h1>
+  <h3>Rumors: <%= @posts.count%></h3>
   <div>
     <% @posts.each do |post|%>
       <section class="card theme-bg py-2 my-3 border border-light px-3 shadow-lg">
         <div class="card-title d-flex flex-column border-bottom  font-weight-lighter">
-          <h2><%= @signed_in? post.user.name : "Anonymous"%></h2>
+          <h2><%= user_signed_in?? post.user.name : "Anonymous"%></h2>
           <div class="d-flex">
             <em class="h4">Title: <%= post.title %></em>
           </div>

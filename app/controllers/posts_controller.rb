@@ -1,9 +1,7 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: %i[index show]
   def index
-    @signed_in = false
-    @signed_in = true if user_signed_in?
-    @posts = Post.all
+    @posts = Post.all.order('created_at DESC')
   end
 
   def new

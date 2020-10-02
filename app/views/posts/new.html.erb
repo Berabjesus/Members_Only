@@ -1,2 +1,5 @@
-<h1>Posts#new</h1>
-<p>Find me in app/views/posts/new.html.erb</p>
+<div class="row d-flex flex-column text-white px-4 theme-bg border-rad-1">
+  <div class="border-bottom border-light pb-4">
+    <%= render partial: 'form' if user_signed_in? %>
+  </div>
+</div>
