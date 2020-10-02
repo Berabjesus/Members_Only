@@ -10,6 +10,34 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header class="fixed-top w-100">
+      <nav class="navbar navbar-dark bg-dark w-100 d-flex shadow">
+        <div>
+          <%= link_to root_path do %>
+            <%= image_tag "logo.png", class:'img-fluid logo'%>
+          <%end%>
+        </div>
+        <div>
+          <h1 class="text-white"> Rumor Mill</h1>
+        </div>
+        <div class="btn-group-lg">
+          <%= user_status[0]%>
+          <%= user_status[1]%>
+        </div>
+      </nav>
+    </header>
+    <main class= 'main container shadow px-0 mb-4'>
+      <% if flash[:notice]%>
+        <div class="alert alert-info bg-light border border-light text-dark text-center">
+          <strong><%= notice%></strong>
+        </div>
+      <%end%>
+      <% if flash[:alert]%>
+        <div class="alert alert-warning text-center text-white bg-danger border m-0 w-100">
+          <strong class="h5"><%= alert.html_safe%></strong>
+        </div>
+      <%end%>
+      <%= yield %>
+    </main>
   </body>
 </html>

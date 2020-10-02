@@ -1,0 +1,10 @@
+  <%= form_with model: @post, local: true, class: 'd-flex flex-column' do |form| %>
+    <h4>Add a New Rumor</h4>
+    <div class="form-group">
+      <%= form.text_field :title, placeholder: "Rumor Title", rows: '2', class: 'form-control w-100 border border-bottom border-top-0 border-left-0 border-right-0 mb-3 bg-light'%>
+      <%= form.text_area :content, placeholder: "More . . .", rows: '5', class: 'form-control w-100 border border-bottom border-top-0 border-left-0 border-right-0 bg-light'%>
+    </div>
+    <div class="actions align-self-end">
+      <%= form.submit 'Add', class:'btn twitter-bg text-white border-rad border' %>
+    </div>      
+  <%end%>
