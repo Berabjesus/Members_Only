@@ -13,7 +13,9 @@
     <header class="fixed-top w-100">
       <nav class="navbar navbar-dark bg-dark w-100 d-flex shadow">
         <div>
-          <%= image_tag "logo.png", class:'img-fluid logo'%>
+          <%= link_to root_path do %>
+            <%= image_tag "logo.png", class:'img-fluid logo'%>
+          <%end%>
         </div>
         <div>
           <h1 class="text-white"> Rumor Mill</h1>
@@ -29,9 +31,9 @@
         </div>
       </nav>
     </header>
-    <main class= 'main container shadow'>
+    <main class= 'main container shadow px-0'>
       <% if flash[:notice]%>
-        <div class="alert alert-info bg-light border border-light text-white text-center">
+        <div class="alert alert-info bg-light border border-light text-dark text-center">
           <strong><%= notice%></strong>
         </div>
       <%end%>

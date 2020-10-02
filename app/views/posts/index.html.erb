@@ -1,15 +1,15 @@
-<div class="row d-flex flex-column text-white px-4 theme-bg">
+<div class="row d-flex flex-column text-white px-4 theme-bg border-rad-1">
   <div class="border-bottom border-light pb-4">
     <%= render partial: 'form' if @signed_in %>
   </div>
-  <h1>Rumors</h1>
+  <h1>Rumors <%= @posts.count%></h1>
   <div>
     <% @posts.each do |post|%>
-      <section class="card theme-bg py-2 my-2 border border-light px-3">
-        <div class="card-title d-flex flex-column ">
+      <section class="card theme-bg py-2 my-3 border border-light px-3 shadow-lg">
+        <div class="card-title d-flex flex-column border-bottom  font-weight-lighter">
           <h2><%= @signed_in? post.user.name : "Anonymous"%></h2>
           <div class="d-flex">
-            <h5>Title: <%= post.title %></h5>
+            <em class="h4">Title: <%= post.title %></em>
           </div>
           <div>
             <span class="ml-auto"><%= distance_of_time_in_words(Time.now, post.created_at ) %> ago</span>
