@@ -10,7 +10,7 @@
 
 ## See the Live version here - > [Live Link](https://pacific-depths-76495.herokuapp.com/)
 
-### Logged in IKnterface
+### Logged in Interface
 <img src="./app/assets/images/1.JPG" width="1200px" height="500px" />
 
 ### Guest Interface
